@@ -1,6 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#define BLANK ' '
+#define NEWLINE '\n'
+
 using namespace std;
 
 int main(){
@@ -21,11 +24,12 @@ int main(){
 	}
 	
 	else{
-		protocol;
+	int cCount, lCount, wCount;
+	while ( (c = getc(inFile)) != EOF)
+		if ((c != BLANK) && (c != NEWLINE) )
+			++cCount;
+
+	printf(" %d characters\n ", cCount);
 	}
 	return 0;
-}
-
-void protocol(){
-
 }
